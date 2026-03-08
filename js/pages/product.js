@@ -12,6 +12,7 @@ export async function initProductPage() {
     const productData = await loadProductData();
     if (productData?.media) initProductCarousel(productData.media);
     displayProductData(productData);
+    initChatButton(productData);
     initBookingSystem();
     initFullscreenControls();
   } catch (e) {
@@ -482,4 +483,23 @@ async function submitBooking() {
         bookingSubmitBtn.disabled = false;
         bookingSubmitBtn.textContent = 'Подтвердить бронирование';
     }
+}
+
+function initChatButton(productData) {
+    const chatLink = document.getElementById('chatLink');
+    if (!chatLink || !productData) return;
+
+    const productId = productData.id || 'unknown-product';
+    const productTitle = productData.title || productData.name || 'Без названия';
+    const sellerName = productData.sellerName || productData.seller || 'Продавец';
+    const avatar = productData.sellerAvatar || '🧑‍💼';
+
+    const params = new URLSearchParams({
+        productId: String(productId),
+        productTitle: productTitle,
+        sellerName: sellerName,
+        avatar: avatar
+    });
+
+    chatLink.href = `chat.html?${params.toString()}`;
 }

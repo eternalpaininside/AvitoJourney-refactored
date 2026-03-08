@@ -1,28 +1,51 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
-    <meta charset="utf-8"/>
-    <title>Чат с продавцами</title>
-    <link href="../css/main.css" rel="stylesheet"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сообщения - ТужорниПерни</title>
+    <link rel="stylesheet" href="../css/main.css" />
 </head>
-<body class="chat-page" data-page="chat">
+<body data-page="chat" class="chat-page">
     <div id="app-header"></div>
-    <main class="chat-main">
-        <aside class="chat-sidebar">
-            <h3>Диалоги</h3>
-            <div id="chatsList"></div>
-        </aside>
-        <section class="chat-window">
-            <div class="chat-header" id="chatHeader"></div>
-            <div class="chat-messages" id="chatMessages"></div>
-            <div class="chat-input-area">
-                <input id="messageInput" maxlength="200" placeholder="Напишите сообщение..." type="text"/>
-                <button id="sendMessageBtn">Отправить</button>
-            </div>
+
+    <main>
+        <section class="chat-main">
+            <aside class="chat-sidebar">
+                <div class="chat-sidebar-top">
+                    <h2>Сообщения</h2>
+                    <p>Ваши диалоги с продавцами</p>
+
+                    <div class="chat-search-box">
+                        <input
+                            id="chatSearchInput"
+                            type="text"
+                            placeholder="Поиск по чатам..."
+                            autocomplete="off"
+                        />
+                    </div>
+                </div>
+                <div id="chatsList" class="chat-list"></div>
+            </aside>
+
+            <section class="chat-window">
+                <div class="chat-header" id="chatHeader"></div>
+                <div class="chat-messages" id="chatMessages"></div>
+
+                <div class="chat-input-area">
+                    <input
+                        id="messageInput"
+                        type="text"
+                        maxlength="500"
+                        placeholder="Напишите сообщение..."
+                    />
+                    <button id="sendMessageBtn" type="button">Отправить</button>
+                </div>
+            </section>
         </section>
     </main>
-    <script src="../js/app.js" type="module"></script>
+
     <div id="app-footer"></div>
+    <script type="module" src="../js/app.js"></script>
 </body>
 </html>
