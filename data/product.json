@@ -1,0 +1,91 @@
+{
+  "title": "Тропа в лес",
+  "price": "8900",
+  "currency": "Руб.",
+  "location": "Пермь, тропа в лес",
+  "distance": "15 км от города",
+  "tags": [
+    "Природа",
+    "Поход",
+    "Экотуризм"
+  ],
+  "description": "Прогулка по живописной тропе в окрестностях Перми.",
+  "media": [
+    {
+      "type": "image",
+      "url": "../images/forest-1.svg"
+    },
+    {
+      "type": "image",
+      "url": "../images/forest-2.svg"
+    },
+    {
+      "type": "image",
+      "url": "../images/forest-3.svg"
+    }
+  ],
+  "seller": {
+    "name": "Иван Петров",
+    "role": "Опытный гид",
+    "clients": 58,
+    "rating": 4.9
+  },
+  "reviews": [
+    {
+      "id": 1,
+      "text": "Отлично! Всё понравилось.",
+      "author": "Анна",
+      "rating": 5,
+      "date": "июнь 2025",
+      "avatar": "../images/avatar-anna.svg"
+    },
+    {
+      "id": 2,
+      "text": "Хороший маршрут, но было холодно.",
+      "author": "Дмитрий",
+      "rating": 4,
+      "date": "май 2025",
+      "avatar": "../images/avatar-dima.svg"
+    },
+    {
+      "id": 3,
+      "text": "Хороший маршрут, но было холодно.",
+      "author": "Дмитрий",
+      "rating": 4,
+      "date": "май 2025",
+      "avatar": "../images/avatar-dima.svg"
+    },
+    {
+      "id": 4,
+      "text": "Меня подстригли налысо(.",
+      "author": "Пиксель",
+      "rating": 2,
+      "date": "май 2025",
+      "avatar": "../images/avatar-dima.svg"
+    },
+    {
+      "id": 5,
+      "text": "Осталось",
+      "author": "Виктория",
+      "rating": 3,
+      "date": "июнь 2025",
+      "avatar": "../images/avatar-anna.svg"
+    },
+    {
+      "id": 6,
+      "text": "Отлично! Всё понравилось.",
+      "author": "Полина",
+      "rating": 5,
+      "date": "январь 2025",
+      "avatar": "../images/avatar-anna.svg"
+    },
+    {
+      "id": 7,
+      "text": "Отлично! Всё понравилось.",
+      "author": "Павел",
+      "rating": 5,
+      "date": "июнь 2025",
+      "avatar": "../images/avatar-dima.svg"
+    }
+  ]
+}

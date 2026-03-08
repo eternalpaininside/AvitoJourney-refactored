@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Профиль продавца - ТужорниПерни</title>
+    <link href="../css/main.css" rel="stylesheet"/>
+</head>
+<body class="page-user" data-page="seller">
+    <main>
+        <div id="app-header"></div>
+        <div class="container">
+            <div class="sidebar">
+                <h2>Профиль продавца</h2>
+                <ul>
+                    <li><a href="#profile">Информация</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <div class="logout-container">
+                    <button class="logout-btn" data-action="back" type="button">← Назад к объявлению</button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="seller-detail-content">
+                    <div class="seller-profile-section" id="profile">
+                        <div class="seller-header">
+                            <div class="seller-avatar">
+                                <img alt="Константин Плотников" src="../images/avatar-konstantin.svg"/>
+                            </div>
+                            <div class="seller-info">
+                                <h1>Константин Плотников</h1>
+                                <p class="seller-role">Частный предприниматель</p>
+                                <div class="seller-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="rating-value">5.0</span>
+                                </div>
+                                <div class="seller-stats">
+                                    <div class="stat-item">
+                                        <span class="stat-value">58</span>
+                                        <span class="stat-label">клиентов</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-value">42</span>
+                                        <span class="stat-label">услуги</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="stat-value">3</span>
+                                        <span class="stat-label">года</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-buttons seller-actions">
+                            <a class="contact-btn chat" href="chat.html">💬 Написать</a>
+                            <button class="contact-btn call" data-action="contact" data-kind="call" type="button">📞 Позвонить</button>
+                        </div>
+                        <div class="seller-description">
+                            <h3>О себе</h3>
+                            <p>Предоставляю услуги гида по Перми и Пермскому краю. Организую экскурсии, походы и активный отдых. Более 3 лет опыта работы с туристами.</p>
+                            <div class="seller-tags">
+                                <span class="tag">Гид</span>
+                                <span class="tag">Экскурсовод</span>
+                                <span class="tag">Организатор</span>
+                                <span class="tag">Пермь</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seller-services-section" id="services">
+                        <h2>Предлагаемые услуги</h2>
+                        <div class="product-grid seller-products">
+                            <div class="loading">Загрузка услуг...</div>
+                        </div>
+                    </div>
+                    <div class="seller-reviews-section" id="reviews">
+                        <h2>Отзывы клиентов</h2>
+                        <div class="reviews-chat">
+                            <div class="review-message">
+                                <div class="review-avatar">
+                                    <img alt="Мария" src="https://via.placeholder.com/60x60?text=М"/>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-author">Мария</div>
+                                    <div class="review-rating">★★★★★</div>
+                                    <div class="review-text">«Отличная экскурсия! Константин - настоящий профессионал. Узнали много интересного о городе.»</div>
+                                    <div class="review-actions">
+                                        <span class="review-date">Март 2026</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-message">
+                                <div class="review-avatar">
+                                    <img alt="Алексей" src="https://via.placeholder.com/60x60?text=А"/>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-author">Алексей</div>
+                                    <div class="review-rating">★★★★★</div>
+                                    <div class="review-text">«Организовал поход на плато Мань-Пупу-Нёр. Всё было на высшем уровне, безопасно и интересно.»</div>
+                                    <div class="review-actions">
+                                        <span class="review-date">Февраль 2026</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-message">
+                                <div class="review-avatar">
+                                    <img alt="Екатерина" src="https://via.placeholder.com/60x60?text=Е"/>
+                                </div>
+                                <div class="review-content">
+                                    <div class="review-author">Екатерина</div>
+                                    <div class="review-rating">★★★★☆</div>
+                                    <div class="review-text">«Хорошая экскурсия по историческому центру. Интересные факты, приятная подача.»</div>
+                                    <div class="review-actions">
+                                        <span class="review-date">Январь 2026</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seller-contact-section" id="contact">
+                        <h2>Контактная информация</h2>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <span class="contact-icon">📱</span>
+                                <span class="contact-text">+7 (912) 345-67-89</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">✉️</span>
+                                <span class="contact-text">konstantin@example.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <span class="contact-text">г. Пермь, ул. Ленина, д. 15</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">🕒</span>
+                                <span class="contact-text">Пн-Пт: 9:00-18:00, Сб: 10:00-16:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="app-footer"></div>
+    <a aria-label="Наверх" class="scroll-to-top" href="#"></a>
+<script src="../js/app.js" type="module"></script>
+</body>
+</html>

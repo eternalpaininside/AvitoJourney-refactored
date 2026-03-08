@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Дача Костика Урагана",
+    "description": "Отдохните на даче великого человека с большим сердцем",
+    "image": "../images/product-1.svg",
+    "price": 6000,
+    "currency": "Руб.",
+    "location": "г. Иванов, ул. Иванова 100",
+    "distance": "100км"
+  },
+  {
+    "id": 2,
+    "name": "Астана",
+    "description": "Путешествие в Астану, город грез",
+    "image": "../images/product-2.svg",
+    "price": 5000,
+    "currency": "Руб.",
+    "location": "г. Астана",
+    "distance": "2000км"
+  },
+  {
+    "id": 3,
+    "name": "Деревня Залупкино",
+    "description": "Окажись в шкуре обычного деревенского человека",
+    "image": "../images/product-3.svg",
+    "price": 3000,
+    "currency": "Руб.",
+    "location": "д. Залупкино",
+    "distance": "100км"
+  },
+  {
+    "id": 4,
+    "name": "Загородный дом",
+    "description": "Отметь Новый Год в большом доме в интересной компании",
+    "image": "../images/product-4.svg",
+    "price": 10000,
+    "currency": "Руб.",
+    "location": "Загородный комплекс",
+    "distance": "50км"
+  },
+  {
+    "id": 5,
+    "name": "Тропа в лес",
+    "description": "Тропа в лес в красивые места. Хожу там с детства",
+    "image": "../images/product-5.svg",
+    "price": 1500,
+    "currency": "Руб.",
+    "location": "Лесной массив",
+    "distance": "30км"
+  },
+  {
+    "id": 6,
+    "name": "Горный курорт",
+    "description": "Активный отдых в горах с прекрасными видами",
+    "image": "../images/product-6.svg",
+    "price": 8000,
+    "currency": "Руб.",
+    "location": "Горный район",
+    "distance": "300км"
+  }
+]

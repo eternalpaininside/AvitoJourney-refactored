@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <title>Чат с продавцами</title>
+    <link href="../css/main.css" rel="stylesheet"/>
+</head>
+<body class="chat-page" data-page="chat">
+    <div id="app-header"></div>
+    <main class="chat-main">
+        <aside class="chat-sidebar">
+            <h3>Диалоги</h3>
+            <div id="chatsList"></div>
+        </aside>
+        <section class="chat-window">
+            <div class="chat-header" id="chatHeader"></div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input-area">
+                <input id="messageInput" maxlength="200" placeholder="Напишите сообщение..." type="text"/>
+                <button id="sendMessageBtn">Отправить</button>
+            </div>
+        </section>
+    </main>
+    <script src="../js/app.js" type="module"></script>
+    <div id="app-footer"></div>
+</body>
+</html>

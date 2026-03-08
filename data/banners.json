@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "image": "../images/banner-1.svg",
+    "title": "Путешествия в горы"
+  },
+  {
+    "id": 2,
+    "image": "../images/banner-2.svg",
+    "title": "Отдых на море"
+  },
+  {
+    "id": 3,
+    "image": "../images/banner-3.svg",
+    "title": "Экстремальные туры"
+  },
+  {
+    "id": 4,
+    "image": "../images/banner-4.svg",
+    "title": "Путешествия в долину"
+  },
+  {
+    "id": 5,
+    "image": "../images/banner-5.svg",
+    "title": "Путешествия в лес"
+  }
+]

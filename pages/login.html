@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Вход / Регистрация</title>
+    <link href="../css/main.css" rel="stylesheet"/>
+    <link href="../css/auth.css" rel="stylesheet"/>
+</head>
+<body class="auth-page" data-page="login">
+  <div id="app-header"></div>
+
+  <main class="auth-main">
+    <div class="auth-container">
+      <h1>Вход / Регистрация</h1>
+
+      <form class="auth-form" id="loginForm">
+        <div class="input-group">
+          <label for="loginEmail">Email</label>
+          <input id="loginEmail" name="email" required type="email" />
+        </div>
+        <div class="input-group">
+          <label for="loginPassword">Пароль</label>
+          <input id="loginPassword" name="password" required type="password" />
+        </div>
+        <div class="button-group">
+          <button class="login-btn" id="loginBtn" type="button">Войти</button>
+          <button class="register-btn" id="toRegisterBtn" type="button">Зарегистрироваться</button>
+        </div>
+      </form>
+
+      <form class="auth-form hidden" id="registerForm">
+        <div class="input-group">
+          <label for="registerName">Имя</label>
+          <input id="registerName" name="name" required type="text" />
+        </div>
+        <div class="input-group">
+          <label for="registerEmail">Email</label>
+          <input id="registerEmail" name="email" required type="email" />
+        </div>
+        <div class="input-group">
+          <label for="registerPassword">Пароль</label>
+          <input id="registerPassword" name="password" required type="password" />
+        </div>
+        <div class="input-group">
+          <label for="confirmPassword">Подтвердите пароль</label>
+          <input id="confirmPassword" name="confirmPassword" required type="password" />
+        </div>
+        <div class="button-group">
+          <button class="login-btn" id="toLoginBtn" type="button">Вернуться</button>
+          <button class="register-btn" id="registerBtn" type="button">Зарегистрироваться</button>
+        </div>
+      </form>
+
+      <div class="switch-form">
+        <span id="loginMessage"></span>
+        <span id="registerMessage"></span>
+      </div>
+    </div>
+  </main>
+
+    <script src="../js/app.js" type="module"></script>
+    <div id="app-footer"></div>
+</body>
+</html>

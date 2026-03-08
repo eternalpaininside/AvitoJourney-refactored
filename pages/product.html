@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Детали объявления - ТужорниПерни</title>
+    <link href="../css/main.css" rel="stylesheet"/>
+</head>
+<body data-page="product">
+    <main>
+        <div id="app-header"></div>
+            <div class="product-detail-page">
+                <div class="product-detail-left">
+                    <div class="carousel-wrapper">
+                        <button class="arrow-btn" id="prevBtn">←</button>
+                        <div class="carousel-container">
+                            <div class="carousel-track" id="carouselTrack"></div>
+                        </div>
+                    <button class="arrow-btn" id="nextBtn">→</button>
+                    <div class="indicators" id="indicators"></div>
+                        </div>
+                        <div class="product-info-container" id="productInfo">
+                        <div class="loading">
+                        <div class="loading-icon">⏳</div>
+                        <p>Загрузка данных объявления...</p>
+                    </div>
+                </div>
+                    <div class="booking-section is-hidden" id="bookingSection">
+                    <h3 class="booking-title">📅 Выберите время бронирования</h3>
+                    <div class="booking-date-selector">
+                        <label for="bookingDate">Дата:</label>
+                        <input class="booking-date-input" id="bookingDate" type="date"/>
+                    </div>
+                    <div class="booking-time-grid" id="bookingTimeGrid">
+                        <div class="loading-times">Загрузка доступного времени...</div>
+                    </div>
+                    <div class="booking-confirm is-hidden" id="bookingConfirm">
+                        <p class="booking-selected-text">Выбрано время: <span id="selectedTimeText"></span></p>
+                        <button class="booking-submit-btn" id="bookingSubmitBtn">Подтвердить бронирование</button>
+                    </div>
+                </div>
+            </div>
+
+    <div class="product-detail-right">
+        <div class="action-buttons">
+            <button class="book-button book-top">📅 Забронировать сейчас</button>
+            <button aria-label="Добавить в избранное" class="favorite-btn" id="favoriteBtn">
+                <span class="favorite-icon">☆</span>
+                <span class="favorite-text">В избранное</span>
+            </button>
+            <div class="contact-buttons">
+                <a class="contact-btn chat" href="chat.html">💬 Написать</a>
+                <button class="contact-btn call">📞 Позвонить</button>
+            </div>
+        </div>
+        <div aria-label="Перейти к продавцу" class="seller-info" role="button" tabindex="0">
+            <div class="seller-profile">
+                <div class="avatar">
+                    <img alt="Иван Петров" src="../images/avatar-ivan.svg"/>
+                </div>
+                <h3 id="seller-name">Иван Петров</h3>
+                <p class="role" id="seller-role">Опытный гид</p>
+                <div class="rating" id="seller-rating">★★★★★ <span>(4.9)</span></div>
+                <div class="stats">
+                    <div>
+                        <strong id="seller-clients">58</strong>
+                        <span>клиентов</span>
+                    </div>
+                    <div>
+                        <strong>42</strong>
+                        <span>услуги</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews-section">
+            <h4>Отзывы клиентов</h4>
+            <div class="reviews-chat">
+                <div class="review-message">
+                    <div class="review-avatar">
+                        <img alt="Мария" src="https://via.placeholder.com/60x60?text=М"/>
+                    </div>
+                    <div class="review-content">
+                        <div class="review-author">Мария</div>
+                        <div class="review-rating">★★★★★</div>
+                        <div class="review-text">«Отличная экскурсия! Иван - настоящий профессионал. Узнали много интересного о городе.»</div>
+                        <div class="review-actions">
+                            <button aria-label="Нравится" class="review-like" data-review-id="1" title="Поставить лайк"></button>
+                            <span class="review-date">Март 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-message">
+                    <div class="review-avatar">
+                        <img alt="Алексей" src="https://via.placeholder.com/60x60?text=А"/>
+                    </div>
+                <div class="review-content">
+                    <div class="review-author">Алексей</div>
+                    <div class="review-rating">★★★★★</div>
+                    <div class="review-text">«Организовал поход на плато Мань-Пупу-Нёр. Всё было на высшем уровне, безопасно и интересно.»</div>
+                <div class="review-actions">
+                    <button aria-label="Нравится" class="review-like" data-review-id="2" title="Поставить лайк"></button>
+                    <span class="review-date">Февраль 2026</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="review-form-container">
+        <h4>Оставить отзыв</h4>
+        <form class="review-form" id="reviewForm">
+        <div class="form-group">
+            <label for="author">Ваше имя</label>
+            <input id="author" name="author" placeholder="Введите ваше имя" required="" type="text"/>
+        </div>
+        <div class="form-group">
+            <label>Оценка</label>
+            <div class="rating-stars" id="ratingStars">
+                <span data-value="1" title="1 звезда">★</span>
+                <span data-value="2" title="2 звезды">★</span>
+                <span data-value="3" title="3 звезды">★</span>
+                <span data-value="4" title="4 звезды">★</span>
+                <span data-value="5" title="5 звёзд">★</span>
+            </div>
+            <input id="rating" name="rating" required="" type="hidden" value="5"/>
+        </div>
+        <div class="form-group">
+            <label for="reviewText">Ваш отзыв</label>
+            <textarea id="reviewText" name="reviewText" placeholder="Поделитесь своим впечатлением..." required="" rows="4"></textarea>
+        </div>
+        <button class="submit-review-btn" type="submit">Отправить отзыв</button>
+        </form>
+        </div>
+        </div>
+    </div>
+
+    <div class="fullscreen-modal" id="fullscreenModal">
+        <button aria-label="Закрыть" class="modal-close" data-action="close" id="modalClose">×</button>
+        <button aria-label="Предыдущее фото" class="modal-nav prev" data-action="prev" id="modalPrev">‹</button>
+        <button aria-label="Следующее фото" class="modal-nav next" data-action="next" id="modalNext">›</button>
+        <div class="modal-content" id="modalContent"></div>
+        <div class="modal-counter" id="modalCounter">1/3</div>
+    </div>
+    </main>
+    <div id="app-footer"></div>
+    <a aria-label="Наверх" class="scroll-to-top" href="#"></a>
+<script src="../js/app.js" type="module"></script>
+</body>
+</html>
