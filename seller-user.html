@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Профиль пользователя - ТужорниПерни</title>
+    <link href="../css/main.css" rel="stylesheet"/>
+</head>
+<body class="page-seller-user" data-page="seller-user">
+    <main>
+        <div id="app-header"></div>
+        <div class="seller-user-container">
+            <aside class="user-sidebar">
+                <div class="user-profile-card">
+                    <div class="user-avatar">
+                        <img alt="Иван Петров" src="../images/avatar-ivan.svg"/>
+                    </div>
+                    <h2 class="user-name">Иван Петров</h2>
+                    <p class="user-status">На сайте с марта 2025</p>
+                    <div class="user-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-value">4.2</span>
+                    </div>
+                    <div class="user-stats-mini">
+                        <div class="mini-stat">
+                            <span class="mini-stat-value" id="userAdsCount">0</span>
+                            <span class="mini-stat-label">Объявлений</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value" id="userReviewsCount">0</span>
+                            <span class="mini-stat-label">Отзывов</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-actions">
+                    <button class="btn-write-message" type="button">
+                        <span class="btn-icon">💬</span>
+                        Написать сообщение
+                    </button>
+                    <button class="btn-show-phone" type="button">
+                        <span class="btn-icon">📞</span>
+                        Показать телефон
+                    </button>
+                    <button class="btn-favorite-user" type="button">
+                        <span class="btn-icon">⭐</span>
+                        Добавить в избранное
+                    </button>
+                </div>
+                <div class="seller-nav">
+                    <a class="back-to-dashboard" href="seller-dashboard.html">← Вернуться в кабинет продавца</a>
+                </div>
+            </aside>
+            <main class="user-main">
+                <section class="user-section active" id="user-ads-section">
+                    <div class="section-header">
+                        <h1>Объявления пользователя</h1>
+                    </div>
+                    <div class="ads-grid" id="userAdsGrid"></div>
+                </section>
+                <section class="user-section" id="user-reviews-section">
+                    <div class="section-header">
+                        <h1>Отзывы о пользователе</h1>
+                    </div>
+                    <div class="reviews-list" id="userReviewsList">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="review-author-info">
+                                    <span class="review-author-name">Анна С.</span>
+                                    <span class="review-date">15 февраля 2026</span>
+                                </div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                            <p class="review-text">«Всё прошло отлично! Иван очень ответственный и пунктуальный.»</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="review-author-info">
+                                    <span class="review-author-name">Дмитрий К.</span>
+                                    <span class="review-date">28 января 2026</span>
+                                </div>
+                                <div class="review-stars">★★★★☆</div>
+                            </div>
+                            <p class="review-text">«Хороший продавец, рекомендую. Была небольшая задержка, но всё решилось.»</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="review-author-info">
+                                    <span class="review-author-name">Елена М.</span>
+                                    <span class="review-date">10 января 2026</span>
+                                </div>
+                                <div class="review-stars">★★★★★</div>
+                            </div>
+                            <p class="review-text">«Очень довольна покупкой! Товар полностью соответствует описанию.»</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="user-section" id="user-info-section">
+                    <div class="section-header">
+                        <h1>О пользователе</h1>
+                    </div>
+                    <div class="user-info-card">
+                        <div class="info-row">
+                            <span class="info-label">Имя:</span>
+                            <span class="info-value">Иван Петров</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">На сайте:</span>
+                            <span class="info-value">с марта 2025</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Город:</span>
+                            <span class="info-value">Пермь</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Всего объявлений:</span>
+                            <span class="info-value" id="infoTotalAds">0</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Рейтинг:</span>
+                            <span class="info-value">4.2 из 5.0</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </main>
+    <div id="app-footer"></div>
+    <a aria-label="Наверх" class="scroll-to-top" href="#"></a>
+    <div class="modal-overlay" id="messageModal">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h2>Написать сообщение</h2>
+                <button class="modal-close" type="button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="message-form" id="messageForm">
+                    <div class="form-group">
+                        <label for="messageText">Ваше сообщение</label>
+                        <textarea id="messageText" required rows="5" placeholder="Здравствуйте, меня интересует ваш товар..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" type="button">Отмена</button>
+                <button class="btn-submit" type="submit" form="messageForm">Отправить</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/app.js" type="module"></script>
+</body>
+</html>
