@@ -91,3 +91,54 @@ body.auth-page {
 .auth-form.hidden {
   display: none;
 }
+
+.role-selector {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.role-option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.role-option:hover {
+  border-color: #007bff;
+  background: #f0f7ff;
+}
+
+.role-option input[type="radio"] {
+  display: none;
+}
+
+.role-option input[type="radio"]:checked + .role-icon,
+.role-option:has(input[type="radio"]:checked) .role-icon {
+  transform: scale(1.2);
+}
+
+.role-option:has(input[type="radio"]:checked) {
+  border-color: #007bff;
+  background: #e7f3ff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.role-icon {
+  font-size: 32px;
+  margin-bottom: 6px;
+  transition: transform 0.2s ease;
+}
+
+.role-label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
