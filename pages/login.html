@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
     <meta charset="utf-8"/>
@@ -24,6 +23,21 @@
           <label for="loginPassword">Пароль</label>
           <input id="loginPassword" name="password" required type="password" />
         </div>
+        <div class="input-group">
+          <label>Кто вы?</label>
+          <div class="role-selector">
+            <label class="role-option">
+              <input type="radio" name="role" value="user" checked />
+              <span class="role-icon">👤</span>
+              <span class="role-label">Покупатель</span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="role" value="seller" />
+              <span class="role-icon">🏪</span>
+              <span class="role-label">Продавец</span>
+            </label>
+          </div>
+        </div>
         <div class="button-group">
           <button class="login-btn" id="loginBtn" type="button">Войти</button>
           <button class="register-btn" id="toRegisterBtn" type="button">Зарегистрироваться</button>
@@ -46,6 +60,21 @@
         <div class="input-group">
           <label for="confirmPassword">Подтвердите пароль</label>
           <input id="confirmPassword" name="confirmPassword" required type="password" />
+        </div>
+        <div class="input-group">
+          <label>Кто вы?</label>
+          <div class="role-selector">
+            <label class="role-option">
+              <input type="radio" name="regRole" value="user" checked />
+              <span class="role-icon">👤</span>
+              <span class="role-label">Покупатель</span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="regRole" value="seller" />
+              <span class="role-icon">🏪</span>
+              <span class="role-label">Продавец</span>
+            </label>
+          </div>
         </div>
         <div class="button-group">
           <button class="login-btn" id="toLoginBtn" type="button">Вернуться</button>
